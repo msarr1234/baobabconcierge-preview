@@ -167,6 +167,20 @@ footer b{color:var(--gold-soft);font-weight:500}
 }
 @media (max-width:520px){ .members{grid-template-columns:1fr} }
 .wa-fab{position:fixed;right:20px;bottom:20px;z-index:60;display:flex;align-items:center;gap:.6rem;background:var(--plum);color:#fff;padding:.85rem 1.3rem;border:1px solid var(--gold);border-radius:999px;font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;box-shadow:0 14px 34px -10px rgba(51,18,58,.55);transition:all .25s}.wa-fab:hover{background:var(--gold);color:var(--plum-deep)}.wa-fab svg{width:20px;height:20px;fill:currentColor}@media (max-width:520px){.wa-fab span{display:none}.wa-fab{padding:.9rem}}
+.experience{background:linear-gradient(180deg,var(--blush) 0%,var(--ivory) 100%)}
+.exp-lead{max-width:40rem;margin-inline:auto;color:var(--muted);font-size:1.12rem}
+.exp-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:4.5rem;align-items:center;margin-top:3.5rem}
+.exp-steps{display:grid;gap:1.8rem}
+.step{display:flex;gap:1.4rem;align-items:flex-start;padding-bottom:1.8rem;border-bottom:1px solid rgba(195,154,75,.4)}
+.step:last-child{border-bottom:0}
+.step b{font-family:var(--serif);font-size:2.6rem;font-weight:500;color:var(--gold);line-height:1}
+.step h3{font-size:1.7rem;margin-bottom:.3rem}
+.step p{color:var(--muted)}
+.exp-facts{list-style:none;display:grid;grid-template-columns:repeat(4,1fr);gap:1.2rem;margin-top:4rem}
+.exp-facts li{background:#fff;border:1px solid rgba(195,154,75,.35);padding:1.4rem 1rem;text-align:center}
+.exp-facts b{display:block;font-family:var(--serif);font-size:1.35rem;color:var(--plum);font-weight:600}
+.exp-facts span{font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;color:var(--terra)}
+@media (max-width:900px){.exp-grid{grid-template-columns:1fr;gap:3rem}.exp-facts{grid-template-columns:1fr 1fr}}
 </style>
 </head>
 <body><div style="position:fixed;top:0;left:0;right:0;z-index:999;background:#B5452F;color:#fff;text-align:center;font:600 12px/1 sans-serif;letter-spacing:.2em;padding:6px">PREVIEW — NOT LIVE YET · pending approval</div>
@@ -179,6 +193,7 @@ footer b{color:var(--gold-soft);font-weight:500}
       <ul id="menu">
         <li><a href="#story">Our Story</a></li>
         <li><a href="#products">Products</a></li>
+        <li><a href="#experience">Experience</a></li>
         <li><a href="#outlets">Where to Buy</a></li>
         <li><a href="#board">Board</a></li>
         <li><a href="#contact" class="btn" style="padding:.7rem 1.4rem;color:#fff">Order</a></li>
@@ -278,6 +293,39 @@ footer b{color:var(--gold-soft);font-weight:500}
     </div>
 
     <div class="rv" style="max-width:420px;margin:4rem auto 0;text-align:center"><div class="frame" style="padding:10px"><img src="assets/nutrition.jpeg" data-wb="https://web.archive.org/web/20250710224033im_/https://baobabconcierge.com/wp-content/uploads/2022/03/Organic1-600x1024.jpeg" alt="Nutrition facts for The Akara Factory akara" loading="lazy"></div><div class="cap" style="font-family:var(--serif);font-size:1.2rem;margin-top:.7rem;color:var(--plum)">What's inside</div></div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section class="experience" id="experience">
+  <div class="wrap">
+    <div class="center rv">
+      <span class="eyebrow">For Visitors to The Gambia</span>
+      <h2 style="margin-top:.8rem">The Akara Masterclass</h2>
+      <div class="rule"></div>
+      <p class="exp-lead">Spend an afternoon in a Gambian family kitchen. Learn to make the street snacks the whole country loves, hear the story behind them, and eat everything you cook.</p>
+    </div>
+
+    <div class="exp-grid">
+      <div class="frame rv"><img src="assets/hujajah-pack.jpeg" data-wb="https://web.archive.org/web/20250710224033im_/https://baobabconcierge.com/wp-content/uploads/2022/01/WhatsApp-Image-2021-12-13-at-11.50.47.jpeg" alt="Akara and beignets from The Akara Factory" loading="lazy"></div>
+      <div class="exp-steps rv">
+        <div class="step"><b>01</b><div><h3>Hear the story</h3><p>Binta Jobe shares how her mother's akara, first made at home in 1981, grew into a family business.</p></div></div>
+        <div class="step"><b>02</b><div><h3>Cook with your hands</h3><p>Prepare black-eyed bean akara and sweet beignets from scratch, then try a savoury filled snack.</p></div></div>
+        <div class="step"><b>03</b><div><h3>Sit down and taste</h3><p>Enjoy what you've made, still warm, with the sauces and sides that go with it.</p></div></div>
+      </div>
+    </div>
+
+    <ul class="exp-facts rv">
+      <li><b>Small groups</b><span>Intimate and hands-on</span></li>
+      <li><b>About 2 hours</b><span>Relaxed, at your pace</span></li>
+      <li><b>English spoken</b><span>Questions welcome</span></li>
+      <li><b>Recipe to take home</b><span>Cook it again back home</span></li>
+    </ul>
+
+    <div class="center rv" style="margin-top:3rem">
+      <a class="btn" href="https://wa.me/2202052945?text=Hello%2C%20I%27d%20like%20to%20book%20the%20Akara%20Masterclass" target="_blank" rel="noopener">Enquire on WhatsApp</a>
+      <p class="note">Dates, group size and price confirmed when you enquire. Dietary needs? Just tell us.</p>
+    </div>
   </div>
 </section>
 
