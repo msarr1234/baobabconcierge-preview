@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Akara Factory — Gambian Street Food, Made Gourmet</title>
+<meta name="description" content="Hujajah's Akara and Beignets — handcrafted Gambian and international street food, freshly produced in The Gambia. A family story, since 1981.">
+<meta property="og:title" content="The Akara Factory">
+<meta property="og:description" content="Gambian street food, made gourmet. From our home to yours, with love.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ivory:#FFFBF4; --cream:#F8EFE1; --blush:#F6E3DA;
+  --plum:#4B1D52; --plum-deep:#33123A; --gold:#C39A4B; --gold-soft:#E7D3A6;
+  --terra:#B5452F; --ink:#2A1F2D; --muted:#6F6272;
+  --serif:'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+  --sans:'Jost', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --shadow:0 24px 60px -24px rgba(51,18,58,.35);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);color:var(--ink);background:var(--ivory);line-height:1.65;font-weight:400;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+.wrap{width:min(1160px,92%);margin-inline:auto}
+.eyebrow{font-size:.78rem;letter-spacing:.32em;text-transform:uppercase;color:var(--gold);font-weight:500}
+h1,h2,h3{font-family:var(--serif);font-weight:500;line-height:1.1;color:var(--plum)}
+h2{font-size:clamp(2.2rem,4.5vw,3.4rem)}
+.rule{width:64px;height:1px;background:var(--gold);margin:1.2rem 0}
+.center{text-align:center}.center .rule{margin-inline:auto}
+section{padding:6.5rem 0}
+
+/* NAV */
+header{position:sticky;top:0;z-index:50;background:rgba(255,251,244,.92);backdrop-filter:blur(10px);border-bottom:1px solid rgba(195,154,75,.28)}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:1rem 0}
+.brand{font-family:var(--serif);font-size:1.55rem;font-weight:600;letter-spacing:.06em;color:var(--plum);text-transform:uppercase}
+.brand small{display:block;font-family:var(--sans);font-size:.58rem;letter-spacing:.38em;color:var(--gold);font-weight:500;margin-top:-.2rem}
+nav ul{display:flex;gap:2.1rem;list-style:none;align-items:center}
+nav a{font-size:.82rem;letter-spacing:.16em;text-transform:uppercase;color:var(--ink);transition:color .2s}
+nav a:hover{color:var(--terra)}
+.btn{display:inline-block;padding:.95rem 2rem;border:1px solid var(--plum);background:var(--plum);color:#fff;font-size:.8rem;letter-spacing:.22em;text-transform:uppercase;transition:all .25s;cursor:pointer;font-family:var(--sans)}
+.btn:hover{background:var(--gold);border-color:var(--gold);color:var(--plum-deep)}
+.btn.ghost{background:transparent;color:var(--plum)}
+.btn.ghost:hover{background:var(--plum);color:#fff;border-color:var(--plum)}
+.menu-btn{display:none;background:none;border:0;font-size:1.6rem;color:var(--plum);cursor:pointer}
+
+/* HERO */
+.hero{padding:4.5rem 0 6rem;background:radial-gradient(1200px 520px at 85% -10%,var(--blush) 0%,transparent 60%),radial-gradient(700px 400px at -5% 100%,var(--cream) 0%,transparent 60%)}
+.hero-grid{display:grid;grid-template-columns:1fr minmax(360px,500px) 1fr;gap:3.5rem;align-items:center}
+.hero-left{text-align:right}.hero-left .rule{margin-left:auto}.hero-left .lead{margin-left:auto}
+.portrait-hero{width:100%}
+.hero h1{font-size:clamp(2.6rem,4.6vw,4.2rem);margin:1.1rem 0 1.4rem}
+.hero h1 em{color:var(--terra);font-style:italic;font-weight:500}
+.hero p.lead{font-size:1.15rem;color:var(--muted);max-width:30rem;font-weight:300}
+.hero .actions{display:flex;gap:1rem;flex-wrap:wrap;margin-top:2.2rem}
+.hero .est{margin-top:2.6rem;display:flex;gap:2.4rem;font-family:var(--serif);color:var(--plum)}
+.hero .est b{display:block;font-size:2.2rem;font-weight:500;line-height:1}
+.hero .est span{font-family:var(--sans);font-size:.7rem;letter-spacing:.22em;text-transform:uppercase;color:var(--muted)}
+
+/* ARCH PORTRAIT */
+.portrait{position:relative;justify-self:center;width:min(420px,88%)}
+.arch{position:relative;aspect-ratio:3/4;border-radius:999px 999px 14px 14px;overflow:hidden;background:linear-gradient(160deg,var(--plum) 0%,var(--plum-deep) 100%);box-shadow:var(--shadow)}
+.arch img{width:100%;height:100%;object-fit:cover}
+.arch .mono{position:absolute;inset:0;display:grid;place-items:center;font-family:var(--serif);font-size:7rem;color:var(--gold-soft);letter-spacing:.06em}
+.portrait::before{content:"";position:absolute;inset:-16px -16px 16px 16px;border:1px solid var(--gold);border-radius:999px 999px 14px 14px;z-index:-1}
+.portrait figcaption{margin-top:1.6rem;text-align:center;font-family:var(--serif);font-size:1.5rem;color:var(--plum)}
+.portrait figcaption small{display:block;font-family:var(--sans);font-size:.72rem;letter-spacing:.24em;text-transform:uppercase;color:var(--muted);margin-top:.2rem}
+
+/* STORY */
+.story{background:var(--plum-deep);color:#F3E9F4;position:relative;overflow:hidden}
+.story::before{content:"“";position:absolute;top:-4rem;left:4%;font-family:var(--serif);font-size:34rem;line-height:1;color:rgba(195,154,75,.1)}
+.story h2{color:#fff}
+.story .eyebrow{color:var(--gold-soft)}
+.story-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:5rem;align-items:center;position:relative}
+.story .arch{box-shadow:0 30px 70px -30px rgba(0,0,0,.6)}
+.story .portrait::before{border-color:var(--gold)}
+.story .portrait figcaption{color:#fff}
+.story .portrait figcaption small{color:var(--gold-soft)}
+.story-text p{font-family:var(--serif);font-size:1.38rem;line-height:1.7;margin-bottom:1.3rem;color:#F0E4F1}
+.story-text p:first-of-type::first-letter{font-size:4.4rem;float:left;line-height:.85;padding:.35rem .7rem 0 0;color:var(--gold);font-weight:600}
+.story-text .sign{font-style:italic;color:var(--gold-soft);font-size:1.5rem;margin-top:1.8rem}
+.story-text strong{font-weight:600;color:#fff}
+
+/* PRODUCTS */
+.products{background:var(--ivory)}
+.prod-grid{display:grid;grid-template-columns:1fr 1fr;gap:4.5rem;align-items:center;margin-top:3.5rem}
+.frame{position:relative;border:1px solid var(--gold);padding:14px;background:#fff;box-shadow:var(--shadow)}
+.frame img{width:100%;height:auto}
+.prod-copy h3{font-size:2.5rem;margin-bottom:.4rem}
+.prod-copy .tag{font-size:.74rem;letter-spacing:.26em;text-transform:uppercase;color:var(--terra);font-weight:500}
+.prod-copy p{color:var(--muted);margin:1rem 0;font-size:1.05rem}
+.ticks{list-style:none;margin:1.4rem 0}
+.ticks li{padding:.55rem 0 .55rem 2rem;position:relative;border-bottom:1px solid rgba(195,154,75,.3)}
+.ticks li::before{content:"✦";position:absolute;left:0;color:var(--gold)}
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem;margin-top:4.5rem}
+.slideshow{position:relative;aspect-ratio:4/5;padding:14px;overflow:hidden}
+.slideshow .slide{position:absolute;inset:14px;opacity:0;transition:opacity 1s ease}
+.slideshow .slide.on{opacity:1}
+.slideshow .slide img{width:100%;height:100%;object-fit:cover}
+.slideshow .dots{position:absolute;left:0;right:0;bottom:24px;display:flex;justify-content:center;gap:.6rem;z-index:2}
+.slideshow .dots button{width:10px;height:10px;border-radius:50%;border:1px solid #fff;background:rgba(255,255,255,.4);cursor:pointer;padding:0}
+.slideshow .dots button.on{background:var(--gold);border-color:var(--gold)}
+.gallery .frame{padding:10px}
+.gallery img{aspect-ratio:4/5;object-fit:cover;width:100%}
+.gallery .cap{font-family:var(--serif);font-size:1.2rem;text-align:center;margin-top:.7rem;color:var(--plum)}
+
+/* OUTLETS */
+.outlets{background:var(--cream)}
+.outlet-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;margin-top:3rem}
+.outlet-list{list-style:none;counter-reset:o}
+.outlet-list li{counter-increment:o;display:flex;gap:1.2rem;padding:1rem 0;border-bottom:1px solid rgba(75,29,82,.15)}
+.outlet-list li::before{content:counter(o,decimal-leading-zero);font-family:var(--serif);font-size:1.6rem;color:var(--gold);min-width:2.4rem}
+.outlet-list b{font-family:var(--serif);font-size:1.35rem;color:var(--plum);font-weight:600;display:block;line-height:1.2}
+.outlet-list span{font-size:.92rem;color:var(--muted)}
+.note{font-size:.85rem;color:var(--muted);margin-top:1.2rem;font-style:italic}
+
+/* BOARD */
+.board{background:var(--ivory)}
+.board-top{display:grid;grid-template-columns:1.1fr .9fr;gap:4rem;align-items:center;margin-top:3.5rem}
+.board-top .frame img{width:100%}
+.memoriam{background:linear-gradient(160deg,var(--plum),var(--plum-deep));color:#fff;padding:2.6rem;text-align:center;box-shadow:var(--shadow)}
+.memoriam .eyebrow{color:var(--gold-soft)}
+.memoriam h3{color:#fff;font-size:1.8rem;margin-top:1.4rem}
+.memoriam p{color:var(--gold-soft);font-size:.78rem;letter-spacing:.2em;text-transform:uppercase;margin-top:.3rem}
+.memoriam .sep{width:36px;height:1px;background:var(--gold);margin:1.4rem auto}
+.members{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;margin-top:3.5rem}
+.member{background:#fff;border:1px solid rgba(195,154,75,.35);padding:1.5rem 1.4rem;text-align:center;transition:transform .25s,box-shadow .25s}
+.member:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+.member h4{font-family:var(--serif);font-size:1.35rem;font-weight:600;color:var(--plum);line-height:1.2}
+.member span{display:block;margin-top:.45rem;font-size:.74rem;letter-spacing:.2em;text-transform:uppercase;color:var(--terra)}
+.fund{margin-top:4rem;text-align:center;font-family:var(--serif);font-size:1.4rem;color:var(--muted);max-width:44rem;margin-inline:auto}
+.fund b{color:var(--plum);font-weight:600}
+
+/* CONTACT */
+.contact{background:var(--plum-deep);color:#EBDDED}
+.contact h2{color:#fff}
+.contact .eyebrow{color:var(--gold-soft)}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;margin-top:3rem}
+.contact-card h3{color:var(--gold-soft);font-size:1.5rem;margin-bottom:1rem}
+.contact-card p,.contact-card a{display:block;margin-bottom:.5rem;font-size:1.05rem}
+.contact-card a:hover{color:var(--gold-soft)}
+.contact .btn{background:var(--gold);border-color:var(--gold);color:var(--plum-deep)}
+.contact .btn:hover{background:#fff;border-color:#fff}
+.contact .btn.ghost{background:transparent;color:#fff;border-color:rgba(255,255,255,.5)}
+.contact .btn.ghost:hover{background:#fff;color:var(--plum-deep)}
+footer{background:#220C27;color:#B9A5BC;padding:2.4rem 0;font-size:.85rem;text-align:center;letter-spacing:.04em}
+footer b{color:var(--gold-soft);font-weight:500}
+
+/* reveal */
+.rv{opacity:0;transform:translateY(24px);transition:opacity .9s ease,transform .9s ease}
+.rv.in{opacity:1;transform:none}
+
+@media (max-width:900px){
+  section{padding:4.5rem 0}
+  .hero-left{text-align:center}.hero-left .rule{margin-inline:auto}.hero-left .lead{margin-inline:auto}
+  .portrait-hero{order:-1;max-width:420px;margin-inline:auto}
+  .hero-grid,.story-grid,.prod-grid,.outlet-grid,.board-top,.contact-grid{grid-template-columns:1fr;gap:3rem}
+  .members{grid-template-columns:1fr 1fr}
+  .gallery{grid-template-columns:1fr}
+  .menu-btn{display:block}
+  nav ul{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;background:var(--ivory);padding:1.4rem;border-bottom:1px solid var(--gold);gap:1.1rem}
+  nav ul.open{display:flex}
+  .story-text p{font-size:1.2rem}
+}
+@media (max-width:520px){ .members{grid-template-columns:1fr} }
+.wa-fab{position:fixed;right:20px;bottom:20px;z-index:60;display:flex;align-items:center;gap:.6rem;background:var(--plum);color:#fff;padding:.85rem 1.3rem;border:1px solid var(--gold);border-radius:999px;font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;box-shadow:0 14px 34px -10px rgba(51,18,58,.55);transition:all .25s}.wa-fab:hover{background:var(--gold);color:var(--plum-deep)}.wa-fab svg{width:20px;height:20px;fill:currentColor}@media (max-width:520px){.wa-fab span{display:none}.wa-fab{padding:.9rem}}
+</style>
+</head>
+<body><div style="position:fixed;top:0;left:0;right:0;z-index:999;background:#B5452F;color:#fff;text-align:center;font:600 12px/1 sans-serif;letter-spacing:.2em;padding:6px">PREVIEW — NOT LIVE YET · pending approval</div>
+
+<header>
+  <div class="wrap nav">
+    <a href="#top" class="brand">The Akara Factory<small>Family recipe since 1981</small></a>
+    <nav aria-label="Main">
+      <button class="menu-btn" aria-label="Menu" onclick="document.getElementById('menu').classList.toggle('open')">☰</button>
+      <ul id="menu">
+        <li><a href="#story">Our Story</a></li>
+        <li><a href="#products">Products</a></li>
+        <li><a href="#outlets">Where to Buy</a></li>
+        <li><a href="#board">Board</a></li>
+        <li><a href="#contact" class="btn" style="padding:.7rem 1.4rem;color:#fff">Order</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div class="rv hero-left">
+      <span class="eyebrow">Handcrafted · Freshly Produced in The Gambia</span>
+      <h1>Gambian street food, <em>made gourmet.</em></h1>
+      <div class="rule"></div>
+      <p class="lead">A recipe a mother made for her children in 1981, now shared with yours.</p>
+    </div>
+    <figure class="portrait portrait-hero rv">
+      <div class="arch">
+        <div class="mono">BJ</div>
+        <img src="assets/binta.jpg" alt="Binta Jobe, General Manager and Executive Chef of The Akara Factory" onerror="this.style.display='none'">
+      </div>
+      <figcaption>Binta Jobe<small>General Manager &amp; Executive Chef</small></figcaption>
+    </figure>
+    <div class="rv hero-right">
+      <p class="lead">Hujajah's Akara and Beignets — pre-cooked, all-natural, and ready in five minutes.</p>
+      <div class="actions">
+        <a class="btn" href="#products">Discover the Range</a>
+        <a class="btn ghost" href="#story">Read Our Story</a>
+      </div>
+      <div class="est">
+        <div><b>1981</b><span>Mother's recipe</span></div>
+        <div><b>2005</b><span>A mother's wish</span></div>
+        <div><b>5 min</b><span>To enjoy</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STORY -->
+<section class="story" id="story">
+  <div class="wrap">
+    <div class="center rv" style="margin-bottom:4rem">
+      <span class="eyebrow">Our Story</span>
+      <h2 style="margin-top:.8rem">From Our Family with Love</h2>
+      <div class="rule"></div>
+    </div>
+    <div class="story-grid">
+      <figure class="portrait rv">
+        <div class="arch">
+          <div class="mono">BJ</div>
+          <img src="assets/binta.jpg" alt="Binta Jobe" onerror="this.style.display='none'">
+        </div>
+        <figcaption>Binta Jobe<small>Daughter · Founder's Dream, Carried On</small></figcaption>
+      </figure>
+      <div class="story-text rv">
+        <p><strong>Dear Esteemed Clientele,</strong> The Akara Factory is the Foodservice component of the Baobab Concierge Services Group that also engages in philanthropy for the Ndeye and Babou Jobe Fund and Hospitality Consultancy.</p>
+        <p>Our Mom started making frozen Akara for my brother Ousman Jobe and I Binta Jobe in 1981 about 40 years ago during my father; H.E Ambassador Babou Jobe's stint as a Diplomat and Civil Servant for 60 years for the Republic of The Gambia 🇬🇲</p>
+        <p>She told me before she passed on that she wanted us to have a company exclusively making Akara on 28th June 2005 on her 59th Birthday.</p>
+        <p>In the last 16 years, so many family and friends helped me achieve her dream, her Sister Chairperson, Mrs. Kinay Gaye, CEO Nancy Njie and VP Chan Khan Jallow who used her legendary fashion house for 5 years as an outlet for me to sell my products when I had nowhere else.</p>
+        <p class="sign">So this is it! From our home to yours with love…</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRODUCTS -->
+<section class="products" id="products">
+  <div class="wrap">
+    <div class="center rv">
+      <span class="eyebrow">The Range</span>
+      <h2 style="margin-top:.8rem">Hujajah's Akara &amp; Beignets</h2>
+      <div class="rule"></div>
+      <p style="color:var(--muted);max-width:36rem;margin-inline:auto">Specializing in handcrafted Gambian and international street foods.</p>
+    </div>
+
+    <div class="prod-grid">
+      <div class="frame rv slideshow" id="slides" aria-label="Product photos">
+        <div class="slide on"><img src="assets/akara-front.jpg" data-wb="https://web.archive.org/web/20250710224033im_/https://baobabconcierge.com/wp-content/uploads/2022/03/akara-front-jpg-600x1024.jpg" alt="Hujajah's Akara — pre-cooked black eye bean fritters" loading="lazy"></div>
+        <div class="slide"><img src="assets/hujajah-pack.jpeg" data-wb="https://web.archive.org/web/20250710224033im_/https://baobabconcierge.com/wp-content/uploads/2022/01/WhatsApp-Image-2021-12-13-at-11.50.47.jpeg" alt="Hujajah's Akara and Beignets, gift-wrapped" loading="lazy"></div>
+        <div class="slide"><img src="assets/products-bags.jpeg" data-wb="https://web.archive.org/web/20250710224033im_/https://baobabconcierge.com/wp-content/uploads/2022/01/WhatsApp-Image-2021-12-14-at-03.23.26.jpeg" alt="Hujajah's range of ready-to-cook street foods" loading="lazy"></div>
+        <div class="dots"><button class="on" aria-label="Photo 1"></button><button aria-label="Photo 2"></button><button aria-label="Photo 3"></button></div>
+      </div>
+      <div class="prod-copy rv">
+        <span class="tag">Signature</span>
+        <h3>Hujajah's Akara</h3>
+        <p>Pre-cooked, all-natural black eye bean fritters. Golden outside, soft within — made the way it has always been made at home.</p>
+        <ul class="ticks">
+          <li>Deep fry, microwave or oven — ready in <b>5 minutes</b></li>
+          <li>All natural black eye beans</li>
+          <li>Freshly produced in The Gambia, West Africa</li>
+        </ul>
+        <a class="btn" href="https://wa.me/2202052945?text=Hello%20Akara%20Factory%2C%20I%27d%20like%20to%20order" target="_blank" rel="noopener">Order on WhatsApp</a>
+      </div>
+    </div>
+
+    <div class="rv" style="max-width:420px;margin:4rem auto 0;text-align:center"><div class="frame" style="padding:10px"><img src="assets/nutrition.jpeg" data-wb="https://web.archive.org/web/20250710224033im_/https://baobabconcierge.com/wp-content/uploads/2022/03/Organic1-600x1024.jpeg" alt="Nutrition facts for The Akara Factory akara" loading="lazy"></div><div class="cap" style="font-family:var(--serif);font-size:1.2rem;margin-top:.7rem;color:var(--plum)">What's inside</div></div>
+  </div>
+</section>
+
+<!-- OUTLETS -->
+<section class="outlets" id="outlets">
+  <div class="wrap">
+    <div class="center rv">
+      <span class="eyebrow">Find Us</span>
+      <h2 style="margin-top:.8rem">Now Available At</h2>
+      <div class="rule"></div>
+    </div>
+    <div class="outlet-grid">
+      <ol class="outlet-list rv">
+        <li><div><b>Marouns Supermarket, Kololi</b><span>Bertil Harding Highway</span></div></li>
+        <li><div><b>Tangerina (Petrogas Fuel Station)</b><span>Brusubi Turn Table</span></div></li>
+        <li><div><b>Pick N Save, Kotu</b><span>Bertil Harding Highway</span></div></li>
+        <li><div><b>Discount Center, Fajara</b><span>Close to the Fajara Booster Station</span></div></li>
+        <li><div><b>NIRO Restaurant &amp; Bar</b><span>Opposite former IEC, Kairaba Avenue</span></div></li>
+        <li><div><b>Alaeldin Restaurant</b><span>See flyer for the full list</span></div></li>
+      </ol>
+      <div class="frame rv"><img src="assets/outlets-flyer.jpeg" data-wb="https://web.archive.org/web/20250710224033im_/https://baobabconcierge.com/wp-content/uploads/2022/03/aladdin-1.jpeg" alt="Now available at these outlets flyer" loading="lazy"></div>
+    </div>
+    <p class="note center">Outlet list taken from our most recent flyer — call or WhatsApp +220 205 2945 to confirm availability near you.</p>
+  </div>
+</section>
+
+<!-- BOARD -->
+<section class="board" id="board">
+  <div class="wrap">
+    <div class="center rv">
+      <span class="eyebrow">Baobab Concierge Services Group</span>
+      <h2 style="margin-top:.8rem">Our Board of Directors</h2>
+      <div class="rule"></div>
+      <p style="color:var(--muted)">...where quality speaks for itself</p>
+    </div>
+
+    <div class="board-top">
+      <div class="frame rv"><img src="assets/board-of-directors.jpeg" data-wb="https://web.archive.org/web/20250710224033im_/https://baobabconcierge.com/wp-content/uploads/2022/03/BOD-NEW.jpeg" alt="Baobab Concierge Services — Board of Directors" loading="lazy"></div>
+      <div class="memoriam rv">
+        <span class="eyebrow">In Memoriam</span>
+        <h3>H.E. Ambassador<br>Babou Ousman Jobe</h3>
+        <div class="sep"></div>
+        <h3>Mrs. Ndeye Hujajah Njie</h3>
+        <p>Founder</p>
+      </div>
+    </div>
+
+    <div class="members">
+      <div class="member rv"><h4>Mr. Abdoulie Touray</h4><span>Chairman Emeritus</span></div>
+      <div class="member rv"><h4>Mrs. Kinay Gaye</h4><span>Chairperson</span></div>
+      <div class="member rv"><h4>Mrs. Nancy Seedy Njie</h4><span>C.E.O</span></div>
+      <div class="member rv"><h4>Mrs. Chan Khan Jallow Tukulor</h4><span>Vice President</span></div>
+      <div class="member rv"><h4>Mrs. Mary Samba Christensen</h4><span>Legal Counsel</span></div>
+      <div class="member rv"><h4>Mr. Ousman Jobe</h4><span>Adviser</span></div>
+      <div class="member rv"><h4>Ms. Amber Barry</h4><span>C.E.O, Amber's Nest</span></div>
+      <div class="member rv"><h4>Ms. Njilan Senghore</h4><span>Financial Adviser</span></div>
+      <div class="member rv"><h4>Sal Taal Esq</h4><span>Adviser</span></div>
+      <div class="member rv"><h4>Mrs. Awa L. Njie</h4><span>CEO, Unique Foundation</span></div>
+      <div class="member rv"><h4>Mrs. JaiYassin Gaye</h4><span>International Culinary Advisor</span></div>
+      <div class="member rv"><h4>Jainaba B. Ceesay</h4><span>Gambia Diaspora Tank</span></div>
+      <div class="member rv"><h4>Mrs. Yam Gaye</h4><span>C.E.O, Go Fresh</span></div>
+      <div class="member rv"><h4>Mrs. Astou Nying Krubally</h4><span>Domestic Sales Advisor</span></div>
+      <div class="member rv"><h4>Ms. Jatou Gaye</h4><span>Social Media &amp; Public Relations Adviser</span></div>
+      <div class="member rv"><h4>Mr. Sulayman Jallow</h4><span>Head of Admin / Procurement</span></div>
+      <div class="member rv"><h4>Ms. Binta Jobe</h4><span>General Manager / Board Secretary</span></div>
+    </div>
+
+    <p class="fund rv">The Akara Factory is one part of a family legacy that also gives back through the <b>Ndeye &amp; Babou Jobe Fund</b>, with Muslim and Christian outreach committees serving the community.</p>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="center rv">
+      <span class="eyebrow">Get in Touch</span>
+      <h2 style="margin-top:.8rem">Order · Enquire · Visit</h2>
+      <div class="rule"></div>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-card rv">
+        <h3>Call or WhatsApp</h3>
+        <a href="https://wa.me/2202052945" target="_blank" rel="noopener">+220 205 2945</a>
+        <a href="https://wa.me/2203015670" target="_blank" rel="noopener">+220 301 5670</a>
+        <h3 style="margin-top:2rem">Email</h3>
+        <a href="mailto:akarafactory@gmail.com">akarafactory@gmail.com</a>
+        <h3 style="margin-top:2rem">Follow</h3>
+        <a href="https://www.instagram.com/akara_factory_/" target="_blank" rel="noopener">Instagram · @akara_factory_</a>
+        <a href="https://x.com/akara_factory" target="_blank" rel="noopener">X · @akara_factory</a>
+        <a href="https://www.facebook.com/" target="_blank" rel="noopener">Facebook · The Akara Factory</a>
+      </div>
+      <div class="contact-card rv">
+        <h3>Visit the Factory</h3>
+        <p>Next to WAIS Knowledge Campus<br>Pipeline Road, KMC<br>The Gambia</p>
+        <p style="margin-top:1.6rem;color:#cdb8d0">Handcrafted Gambian and international street foods, freshly produced in The Gambia.</p>
+        <div style="display:flex;gap:1rem;flex-wrap:wrap;margin-top:2rem">
+          <a class="btn" href="https://wa.me/2202052945?text=Hello%20Akara%20Factory%2C%20I%27d%20like%20to%20order" target="_blank" rel="noopener" style="display:inline-block">Order on WhatsApp</a>
+          <a class="btn ghost" href="mailto:akarafactory@gmail.com" style="display:inline-block">Send an Email</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <p><b>The Akara Factory™</b> · Foodservice arm of the Baobab Concierge Services Group · Proudly partnered with the Gambia Women's Chamber of Commerce</p>
+    <p style="margin-top:.4rem">© <span id="yr"></span> The Akara Factory. Freshly produced in The Gambia, West Africa.</p>
+  </div>
+</footer>
+
+<a class="wa-fab" href="https://wa.me/2202052945?text=Hello%20Akara%20Factory%2C%20I%27d%20like%20to%20order" target="_blank" rel="noopener" aria-label="Order on WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.2 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.2-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.8s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.4.6-.3.3c-.1.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1.1c.2-.3.4-.2.6-.1l1.9.9c.3.1.5.2.5.4.1.1.1.6-.1 1.2z"/></svg><span>Order on WhatsApp</span></a>
+<script>
+document.getElementById('yr').textContent = new Date().getFullYear();
+document.querySelectorAll('#menu a').forEach(a=>a.addEventListener('click',()=>document.getElementById('menu').classList.remove('open')));
+(function(){
+  const box=document.getElementById('slides'); if(!box) return;
+  const s=[...box.querySelectorAll('.slide')], d=[...box.querySelectorAll('.dots button')]; let i=0,t;
+  function show(n){ s[i].classList.remove('on'); d[i].classList.remove('on'); i=(n+s.length)%s.length; s[i].classList.add('on'); d[i].classList.add('on'); }
+  function run(){ clearInterval(t); t=setInterval(()=>show(i+1),4500); }
+  d.forEach((b,n)=>b.addEventListener('click',()=>{show(n);run();}));
+  run();
+})();
+const io = new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+</script>
+<script>/* data-wb-fallback */document.querySelectorAll('img[data-wb]').forEach(function(i){function f(){if(i.dataset.fb)return;i.dataset.fb=1;i.src=i.dataset.wb}i.addEventListener('error',f);if(i.complete&&i.naturalWidth===0)f();});</script>
+</body>
+</html>
